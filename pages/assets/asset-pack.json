@@ -10,6 +10,21 @@
                 "url": "/assets/crabshack.png",
                 "type": "image",
                 "key": "crabshack"
+            },
+            {
+                "url": "/assets/shark-island.png",
+                "type": "image",
+                "key": "shark-island"
+            },
+            {
+                "url": "/assets/crab-island.png",
+                "type": "image",
+                "key": "crab-island"
+            },
+            {
+                "url": "/assets/noun-monument-island.png",
+                "type": "image",
+                "key": "noun-monument-island"
             }
         ]
     },

@@ -1,6 +1,10 @@
 
 import JsonPack from '../../assets/asset-pack.json';
+import CrabIslandContainer from './containers/CrabIslandContainer';
+import CrabIsland from './objects/CrabIsland';
 import CrabShack from './objects/CrabShack';
+import NounMonumentIsland from './objects/NounMonumentIsland';
+import SharkIsland from './objects/SharkIsland';
 import { worldHeight, worldWidth } from './World';
 
 // TODO move to recoilState
@@ -23,15 +27,24 @@ class MainScene extends Phaser.Scene {
 
     create() {
         const position = window.innerWidth / 2;
+        
+        const sharkisland = new SharkIsland(this, position, (window.innerHeight / 2));
+        this.add.existing(sharkisland);
+
+        const smallislandSpread = 400;
+
+        const crabisland = new CrabIslandContainer(this, position - 680, (window.innerHeight / 2)- 120 , []);
+        this.add.existing(crabisland);
+
+        const nounishisland = new NounMonumentIsland(this, position + smallislandSpread, (window.innerHeight / 2) + 180);
+        this.add.existing(nounishisland);
+
         const logo = this.add.image(position, -200, "logo");
         logo.width = 200;
         logo.height = 200;
 
         console.log("Bouncing logo?");
         console.log(logo);
-
-        const shack = new CrabShack(this, 500, 250);
-        this.add.existing(shack);
 
         this.tweens.add({
             targets: logo,

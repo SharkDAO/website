@@ -9,11 +9,15 @@ import World from './components/phaser/World';
 const App: FC = () => {
 
     const [world, setWorld] = useState<World>();
-
+    // componentDidMount
+    // const DynamicComponentWithNoSSR = dynamic( () => import('../components/hello3'), { ssr: false } )
+   
     useEffect(() => {
-        if (!world) {
-            const world = new World();
-            setWorld(world);
+        if (typeof window !== 'undefined') {
+            if (!world) {
+                const world = new World();
+                setWorld(world);
+            }
         }
     }, [world]);
 

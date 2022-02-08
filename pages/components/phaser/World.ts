@@ -17,6 +17,12 @@ export const config = {
         width: viewportWidth,
         height: viewportHeight
     },
+    physics: {
+        default: 'arcade',
+        arcade: {
+
+        }
+    },
     scene: MainScene
 };
 
