@@ -59,6 +59,8 @@ class MainScene extends Phaser.Scene {
         player = this.add.sprite(position, (window.innerHeight / 2), 'player');
         //player.setVisible(true);
         player.setAlpha(0, 0);
+        this.physics.add.existing(player);
+    
 
         // game.physics.p2.enable(player);
 
@@ -80,8 +82,8 @@ class MainScene extends Phaser.Scene {
         console.log(`trying to move to ${x} x ${y} `);
         this.cameras.main.getBounds().contains(x, y);
 
-        return true;
-        // return this.physics.world.bounds.contains(x, y);
+        //return true;
+        return this.physics.world.bounds.contains(x, y);
     };
 
     update() {
@@ -91,7 +93,7 @@ class MainScene extends Phaser.Scene {
 
 
         if (cursors.up.isDown) {
-            const playerY = player.y + 50;
+            const playerY = player.y - 50;
 
             if (this.checkWorldLimits(player.x, playerY)) {
                 // .tween.updateTo("x", this.x);
@@ -100,7 +102,7 @@ class MainScene extends Phaser.Scene {
             // player.body.position.y += 300;
         }
         else if (cursors.down.isDown) {
-            const playerY = player.y - 50;
+            const playerY = player.y + 50;
 
             if (this.checkWorldLimits(player.x, playerY)) {
                 player.setPosition(player.x, playerY);

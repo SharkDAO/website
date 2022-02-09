@@ -20,7 +20,12 @@ export const config = {
     physics: {
         default: 'arcade',
         arcade: {
-
+            debug: true,
+            gravity: { y: 0 }
+        },
+        matter: {
+            debug: true,
+            gravity: { y: 0.5 }
         }
     },
     scene: MainScene
