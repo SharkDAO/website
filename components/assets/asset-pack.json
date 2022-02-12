@@ -2,27 +2,27 @@
     "section1": {
         "files": [
             {
-                "url": "/assets/logo.png",
+                "url": "/images/game/logo.png",
                 "type": "image",
                 "key": "logo"
             },
             {
-                "url": "/assets/crabshack.png",
+                "url": "/images/game/crabshack.png",
                 "type": "image",
                 "key": "crabshack"
             },
             {
-                "url": "/assets/shark-island.png",
+                "url": "/images/game/shark-island.png",
                 "type": "image",
                 "key": "shark-island"
             },
             {
-                "url": "/assets/crab-island.png",
+                "url": "/images/game/crab-island.png",
                 "type": "image",
                 "key": "crab-island"
             },
             {
-                "url": "/assets/noun-monument-island.png",
+                "url": "/images/game/noun-monument-island.png",
                 "type": "image",
                 "key": "noun-monument-island"
             }

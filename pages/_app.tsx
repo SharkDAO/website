@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 
-export default function SharkApp({ Component:any, pageProps:any }) {
+export default function SharkApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
 

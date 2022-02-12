@@ -1,5 +1,5 @@
 
-import JsonPack from '../../assets/asset-pack.json';
+import JsonPack from '../assets/asset-pack.json';
 import CrabIslandContainer from './containers/CrabIslandContainer';
 import CrabIsland from './objects/CrabIsland';
 import CrabShack from './objects/CrabShack';
