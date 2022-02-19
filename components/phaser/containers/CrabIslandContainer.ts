@@ -48,7 +48,7 @@ class CrabIslandContainer extends Phaser.GameObjects.Container {
         const crabisland = new CrabIsland(this.scene, startingX, startingY);
         this.add(crabisland);
 
-        const shack = new CrabShack(this.scene, crabisland.x + 100, crabisland.y + 100);
+        const shack = new CrabShack(this.scene, crabisland.x, crabisland.y);
         this.add(shack);
     }
 

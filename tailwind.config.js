@@ -1,6 +1,10 @@
 module.exports = {
     mode: "jit",
-    purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+    content: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}",],
+    purge: [
+        "./pages/**/*.{js,ts,jsx,tsx}", 
+        "./components/**/*.{js,ts,jsx,tsx}"
+    ],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
@@ -23,9 +27,9 @@ module.exports = {
             colors: {
                 "shark-white": "#ffffff",
                 "shark-black": "#000000",
-                "shark-light-blue": "#7CC4F2",
-                "shark-blue": "#2B83F6",
-                "shark-dark-blue": "#395ED1",
+                "shark-light-blue": "#A7DFF6",
+                "shark-blue": "#004C83",
+                "shark-dark-blue": "#002049",
                 "shark-magenta": "#AB36BE",
                 "shark-pink": "#FF638D",
                 "shark-orange": "#FE500C",

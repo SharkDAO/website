@@ -20,7 +20,8 @@ class MainScene extends Phaser.Scene {
     }
 
     preload() {
-        this.cameras.main.setBackgroundColor(0x98d687);
+        this.cameras.main.transparent = true;
+        //this.cameras.main.setBackgroundColor(0x004C83);
         this.load.addPack(JsonPack, 'preload');
         this.input.mouse.enabled = true;
     }
@@ -31,12 +32,18 @@ class MainScene extends Phaser.Scene {
         const sharkisland = new SharkIsland(this, position, (window.innerHeight / 2));
         this.add.existing(sharkisland);
 
-        const smallislandSpread = 400;
+        const smallislandSpread = 200;
 
-        const crabisland = new CrabIslandContainer(this, position - 680, (window.innerHeight / 2)- 120 , []);
+        this.cameras.main.worldView.x
+
+        const camera = this.cameras.main;
+        const x = (position - camera.worldView.x) * camera.zoom;
+        const y = ((window.innerHeight / 2) - camera.worldView.y) * camera.zoom;
+
+        const crabisland = new CrabIslandContainer(this, x - 600, y - 120 , []);
         this.add.existing(crabisland);
 
-        const nounishisland = new NounMonumentIsland(this, position + smallislandSpread, (window.innerHeight / 2) + 180);
+        const nounishisland = new NounMonumentIsland(this, x + smallislandSpread, y + 180);
         this.add.existing(nounishisland);
 
         const logo = this.add.image(position, -200, "logo");
@@ -49,7 +56,7 @@ class MainScene extends Phaser.Scene {
         this.tweens.add({
             targets: logo,
 
-            y: 350,
+            y: 150,
             duration: 2000,
             ease: "Power2",
             yoyo: false,
