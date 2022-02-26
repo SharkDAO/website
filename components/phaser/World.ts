@@ -18,6 +18,7 @@ export const config = {
         height: viewportHeight
     },
     transparent: true,
+    debug: true, 
     physics: {
         default: 'arcade',
         arcade: {
