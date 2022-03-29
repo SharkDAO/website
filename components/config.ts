@@ -2,10 +2,10 @@ import { trace } from "console";
 
 import dynamic from 'next/dynamic'
 
-const Phaser = dynamic(
-    () => import('phaser'),
-    { ssr: false }
-)
+// const Phaser = dynamic(
+//     () => import('phaser'),
+//     { ssr: false }
+// )
 
 
 
