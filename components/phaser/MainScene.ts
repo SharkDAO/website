@@ -1,6 +1,8 @@
 
+import { threadId } from 'worker_threads';
 import JsonPack from '../assets/asset-pack.json';
 import CrabIslandContainer from './containers/CrabIslandContainer';
+import SharkIslandContainer from './containers/SharkIslandContainer';
 import CrabIsland from './objects/CrabIsland';
 import CrabShack from './objects/CrabShack';
 import NounMonumentIsland from './objects/NounMonumentIsland';
@@ -28,18 +30,22 @@ class MainScene extends Phaser.Scene {
 
     create() {
         const position = window.innerWidth / 2;
-        
-        const sharkisland = new SharkIsland(this, position, (window.innerHeight / 2));
-        this.add.existing(sharkisland);
 
-        const smallislandSpread = 200;
-
-        this.cameras.main.worldView.x
 
         const camera = this.cameras.main;
         const x = (position - camera.worldView.x) * camera.zoom;
         const y = ((window.innerHeight / 2) - camera.worldView.y) * camera.zoom;
 
+        const sharkisland = new SharkIslandContainer(this, camera.worldView.x + position, camera.worldView.y + (camera.worldView.height/2), []);
+        this.add.existing(sharkisland);
+
+        const smallislandSpread = 200;
+
+        // http://labs.phaser.io/edit.html?src=src%5Cphysics%5Carcade%5Csimple%20body.js
+        // add coin animation 
+        console.log(this.sys);
+        
+        
         const crabisland = new CrabIslandContainer(this, x - 600, y - 120 , []);
         this.add.existing(crabisland);
 
@@ -72,6 +78,9 @@ class MainScene extends Phaser.Scene {
         // game.physics.p2.enable(player);
 
         cursors = this.input.keyboard.createCursorKeys();
+        // https://github.com/photonstorm/phaser3-examples/blob/master/public/src/scalemanager/zoom%20manual%20resize.js
+        this.cameras.main.setZoom(1);
+        this.cameras.main.centerOn(0, 0);
         this.cameras.main.setBounds(0, 0, worldWidth, worldHeight);
 
         //this.physics.world.setBounds(0, 0, worldWidth, worldHeight, true, true, true, true);

@@ -9,8 +9,8 @@ class SharkIsland extends Phaser.GameObjects.Sprite {
         super(scene, x, y, 'shark-island');
 
         this.scale = .5;
-        this.width = 800;
-        this.height = 500;
+        this.width = scene.cameras.main.width + 100;
+        this.height = scene.cameras.main.height + 100;
        // this.on('pointerdown', () => this.setModal(), this);
 
     }

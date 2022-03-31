@@ -1,7 +1,6 @@
 import { FC } from "react";
 import Modal from 'react-modal';
 import { atom, useRecoilState } from "recoil";
-import { NFC } from 'next'
 
 export const infoModalState = atom({
     key: 'infoModalState', // unique ID (with respect to other atoms/selectors)
@@ -19,7 +18,7 @@ const customStyles = {
     },
 };
 
-export const InfoModal: NFC = () => {
+export const InfoModal: FC = () => {
 
     const [infoModal, setInfoModal] = useRecoilState(infoModalState);
 
