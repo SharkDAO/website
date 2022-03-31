@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import Link from 'next/link';
 
 
 export const Header: FC = () => {
@@ -16,15 +16,16 @@ export const Header: FC = () => {
                     >about</a
                     >
                 </li>
-                <li className="px-6"><a href="/">
-                    <img src="/images/logo.png" className="h-10 sm:h-10 rounded-full" alt="logo" />
-                </a></li>
+                <li className="px-6"><Link href="/">
+                    <a><img src="/images/logo.png" className="h-10 sm:h-10 rounded-full" alt="logo" /></a>
+                </Link></li>
                 <li className="nav-item">
+                    <Link href="#!">
                     <a
                         className="inline-block py-2 px-3 text-gray-900 hover:text-gray-700 no-underline"
-                        href="#!"
-                    >about</a
-                    >
+                        
+                    >about</a>
+                    </Link>
                 </li>
 
             </ul>
