@@ -5,7 +5,7 @@ import MainScene from "./MainScene";
 export const viewportWidth = window.innerWidth * window.devicePixelRatio;
 export const viewportHeight = (window.innerHeight * window.devicePixelRatio) - 150;
 export const worldWidth = Math.max(window.innerWidth, 2000);
-export const worldHeight = Math.max(window.innerHeight, 1500);
+export const worldHeight = Math.max(window.innerHeight, 800);
 
 
 export const config = {

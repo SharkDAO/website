@@ -1,13 +1,10 @@
 
 import { threadId } from 'worker_threads';
 import JsonPack from '../assets/asset-pack.json';
-import CrabIslandContainer from './containers/CrabIslandContainer';
 import SharkIslandContainer from './containers/SharkIslandContainer';
-import CrabIsland from './objects/CrabIsland';
-import CrabShack from './objects/CrabShack';
-import NounMonumentIsland from './objects/NounMonumentIsland';
-import SharkIsland from './objects/SharkIsland';
 import { worldHeight, worldWidth } from './World';
+import BuildingsContainer from './containers/BuildingsContainer';
+import FrontIslands from './objects/FrontIslands';
 
 // TODO move to recoilState
 let player: Phaser.GameObjects.Sprite;
@@ -46,28 +43,11 @@ class MainScene extends Phaser.Scene {
         console.log(this.sys);
         
         
-        const crabisland = new CrabIslandContainer(this, x - 600, y - 120 , []);
-        this.add.existing(crabisland);
+        const buildings = new BuildingsContainer(this, x/2, (y/2) + 5, []);
+        this.add.existing(buildings);
 
-        const nounishisland = new NounMonumentIsland(this, x + smallislandSpread, y + 180);
-        this.add.existing(nounishisland);
-
-        const logo = this.add.image(position, -200, "logo");
-        logo.width = 200;
-        logo.height = 200;
-
-        console.log("Bouncing logo?");
-        console.log(logo);
-
-        this.tweens.add({
-            targets: logo,
-
-            y: 150,
-            duration: 2000,
-            ease: "Power2",
-            yoyo: false,
-            loop: 1
-        });
+        const frontislands = new FrontIslands(this, x, y);
+        this.add.existing(frontislands);
 
         player = this.add.sprite(position, (window.innerHeight / 2), 'player');
         //player.setVisible(true);
@@ -80,7 +60,7 @@ class MainScene extends Phaser.Scene {
         cursors = this.input.keyboard.createCursorKeys();
         // https://github.com/photonstorm/phaser3-examples/blob/master/public/src/scalemanager/zoom%20manual%20resize.js
         this.cameras.main.setZoom(1);
-        this.cameras.main.centerOn(0, 0);
+        this.cameras.main.centerOn(0, -15);
         this.cameras.main.setBounds(0, 0, worldWidth, worldHeight);
 
         //this.physics.world.setBounds(0, 0, worldWidth, worldHeight, true, true, true, true);

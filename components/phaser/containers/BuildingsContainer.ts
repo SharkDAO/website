@@ -2,13 +2,13 @@
 import { infoModalState } from "../../ui/InfoModal";
 import { getRecoil, setRecoil } from "recoil-nexus";
 import { GameObjects, Textures } from "phaser";
-import CrabIsland from "../objects/CrabIsland";
-import CrabShack from "../objects/CrabShack";
+
+import Buildings from "../objects/Buildings";
 
 
 // https://rexrainbow.github.io/phaser3-rex-notes/docs/site/container/
 // https://rexrainbow.github.io/phaser3-rex-notes/docs/site/zone/ - for some hit areas / clicks
-class CrabIslandContainer extends Phaser.GameObjects.Container {
+class BuildingsContainer extends Phaser.GameObjects.Container {
 
     constructor(scene: Phaser.Scene, x: number, y: number, children: Array<GameObjects.GameObject>) {
         super(scene, x, y, children);
@@ -44,11 +44,8 @@ class CrabIslandContainer extends Phaser.GameObjects.Container {
         */
 
     createObjects(startingX: number, startingY: number) {
-        this.setSize(400,400);
-        const crabisland = new CrabIsland(this.scene, startingX, startingY);
-        this.add(crabisland);
-
-        const shack = new CrabShack(this.scene, crabisland.x, crabisland.y);
+        this.setSize(600,200);
+        const shack = new Buildings(this.scene, startingX, startingY);
         this.add(shack);
     }
 
@@ -56,4 +53,4 @@ class CrabIslandContainer extends Phaser.GameObjects.Container {
 
 }
 
-export default CrabIslandContainer;
+export default BuildingsContainer;
