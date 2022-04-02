@@ -7,52 +7,27 @@
                 "key": "coin"
             },
             {
-                "url": "/images/game/logo.png",
-                "type": "image",
-                "key": "logo"
-            },
-            {
-                "url": "/images/game/crabshack.png",
-                "type": "image",
-                "key": "crabshack"
-            },
-            {
-                "url": "/images/game/SKETCH-island_0001s_0003_Main-Island.png",
+                "url": "/images/frontview/Main.png",
                 "type": "image",
                 "key": "shark-island"
             },
             {
-                "url": "/images/game/SKETCH-island_0001s_0008_North-West-Island.png",
+                "url": "/images/frontview/building.png",
                 "type": "image",
-                "key": "back-island-west-1"
+                "key": "buildings"
             },
             {
-                "url": "/images/game/SKETCH-island_0001s_0000_Northeast-Island.png",
+                "url": "/images/frontview/Front-Islands.png",
                 "type": "image",
-                "key": "back-island-east-1"
-            },
-            {
-                "url": "/images/game/SKETCH-island_0001s_0001_North-Island.png",
-                "type": "image",
-                "key": "back-island-east-2"
-            },
-            {
-                "url": "/images/game/SKETCH-island_0001s_0005_South-west-Island.png",
-                "type": "image",
-                "key": "crab-island"
-            },
-            {
-                "url": "/images/game/SKETCH-island_0001s_0002_South-East-Island.png",
-                "type": "image",
-                "key": "noun-monument-island"
+                "key": "front-islands"
             }
 
         ]
     },
     "meta": {
-        "app": "Phaser Editor 2D - Asset Pack Editor",
+        "app": "Sharkisland",
         "contentType": "phasereditor2d.pack.core.AssetContentType",
-        "url": "https://phasereditor2d.com",
+        "url": "http://www.sharkdao.wtf",
         "version": 2,
         "showAllFilesInBlocks": false
     }

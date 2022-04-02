@@ -20,7 +20,7 @@ const GameComponent: FC = () => {
     }, [world]);
 
     return (
-        <div id='hero' className='bg-gradient-to-t from-shark-dark-blue via-shark-blue to-shark-dark-blue' />
+        <div id='hero' className='' />
     );
 }
 

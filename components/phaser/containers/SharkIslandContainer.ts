@@ -17,33 +17,19 @@ class SharkIslandContainer extends Phaser.GameObjects.Container {
 
         this.setSize(cameraWidth, cameraHeight);
 
-        const eastone = this.scene.add.sprite(50, -50, "back-island-east-1");
+        // const eastone = this.scene.add.sprite(50, -50, "back-island-east-1");
         //eastone.setSize(100,100);
-        const tween = this.scene.add.tween({
-            targets: eastone,
-            x: 500,
-            ease: 'Linear',
-            duration: 1400,
-            repeat: 5,
-            yoyo: true
-        });
-        tween.play();
+        // const tween = this.scene.add.tween({
+        //     targets: eastone,
+        //     x: 500,
+        //     ease: 'Linear',
+        //     duration: 1400,y
+        //     repeat: 5,
+        //     yoyo: true
+        // });
+        // tween.play();
 
-        this.wrapSprite(eastone, "east island one ");
-        this.add(eastone);
-
-        const easttwo = this.scene.add.sprite(100, -100, "back-island-east-2");
-        //easttwo.setSize(100, 100);
-        this.wrapSprite(easttwo, "east island two ");
-        this.add(easttwo);
-
-
-        const westone = this.scene.add.sprite(-300, -115, "back-island-west-1");
-        westone.setOrigin(0, 0);
-        this.wrapSprite(westone, "west island one ");
-        this.add(westone);
-
-        const sharkisland = new SharkIsland(this.scene, 0, 100);
+        const sharkisland = new SharkIsland(this.scene, 0, 0);
         this.add(sharkisland);
 
     }

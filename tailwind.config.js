@@ -10,17 +10,17 @@ module.exports = {
         extend: {
             fontFamily: {
                 "shark-text": ["AUTHENTIC Sans", "sans-serif"],
-                "shark-display": ["MsGothic-SharkDAOMembersOnly-Regular", "sans-serif"],
+                "shark-display": ["Didact Gothic", "sans-serif"],
                 "shark-display-light": [
-                    "MsGothic-SharkDAOMembersOnly-Light",
+                    "Didact Gothic",
                     "sans-serif",
                 ],
                 "shark-display-heavy": [
-                    "MsGothic-SharkDAOMembersOnly-Heavy",
+                    "Didact Gothic",
                     "sans-serif",
                 ],
                 "shark-display-black": [
-                    "MsGothic-SharkDAOMembersOnly-Black",
+                    "Didact Gothic",
                     "sans-serif",
                 ],
             },

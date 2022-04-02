@@ -1,4 +1,6 @@
 import '../styles/globals.css'
+import '../styles/index.css'
+
 import { AppProps } from 'next/app';
 
 export default function SharkApp({ Component, pageProps } : AppProps) {

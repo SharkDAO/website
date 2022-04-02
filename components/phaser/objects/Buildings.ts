@@ -1,15 +1,14 @@
 
 import { infoModalState } from "../../ui/InfoModal";
 import { getRecoil, setRecoil } from "recoil-nexus";
-import { Textures } from "phaser";
 
-class CrabShack extends Phaser.GameObjects.Sprite {
+class Buildings extends Phaser.GameObjects.Sprite {
 
     constructor(scene: Phaser.Scene, x: number, y: number) {
-        super(scene, x, y, 'crabshack');
+        super(scene, x, y, 'buildings');
 
-        this.width = 300;
-        this.height = 300;
+
+        this.scale = .5;
         this.setInteractive({ useHandCursor: true });
         this.on('pointerdown', () => this.setModal(), this);
 
@@ -27,4 +26,4 @@ class CrabShack extends Phaser.GameObjects.Sprite {
     }
 }
 
-export default CrabShack;
+export default Buildings;
