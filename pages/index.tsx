@@ -5,7 +5,8 @@ import { InfoModal } from '../components/ui/InfoModal';
 import dynamic from 'next/dynamic'
 import { Header } from '../components/ui/Header';
 import { TreasuryInfo } from '../components/ui/TreasuryInfo';
-const GameComponent = dynamic(() => import ('../components/ui/GameComponent'),{ssr: false})
+// import HeroComponent from '../components/ui/HeroComponent';
+const HeroComponent = dynamic(() => import('../components/ui/HeroComponent'),{ssr: false})
 // import World from '../components/phaser/World';
 
 const App: FC = () => {
@@ -14,7 +15,7 @@ const App: FC = () => {
             <RecoilNexus />
             <div className="App">
                 <Header />
-                <GameComponent />
+                <HeroComponent />
                 <InfoModal />
                 <TreasuryInfo />
             </div>
