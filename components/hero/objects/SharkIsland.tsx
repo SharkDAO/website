@@ -13,6 +13,7 @@ export const SharkIsland = ({...props}) => {
         <Sprite
             anchor={centerAnchor}
             texture={PIXI.Texture.from(mountainBackground.src)}
+            width={2100}
             {...props}
         />
     );
