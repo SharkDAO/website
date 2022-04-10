@@ -1,17 +1,10 @@
 import React, { FC, useEffect, useRef, useState } from 'react';
 import { Sprite, Stage } from "react-pixi-fiber";
 
-
-import * as PIXI from "pixi.js";
 import { SharkIsland } from './objects/SharkIsland';
 import { Village } from './objects/Village';
 import { FrontIslands } from './objects/FrontIslands';
 
-
-/*
-<div ref={ domRef } />
-    
-*/
 export const viewportWidth = window.innerWidth * window.devicePixelRatio;
 export const viewportHeight = (window.innerHeight * window.devicePixelRatio) - 150;
 export const worldWidth = Math.max(window.innerWidth, 2000);
