@@ -16,8 +16,8 @@ const HeroComponent: FC = () => {
     // }, [world]);
 
     return (
-        <div id='hero' className=''>
-            <MainStage />
+        <div id='hero' className='w-full flex justify-center rounded border'>
+            <MainStage /> 
         </div>
     );
 }
