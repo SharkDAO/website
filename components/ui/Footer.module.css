@@ -1,0 +1,29 @@
+
+.footer {
+
+    @apply  w-full font-sans text-center flex flex-col justify-between items-center mx-auto py-2;
+    background-color: #98d8f4;
+}
+
+.footerWatersEdge {
+
+    @apply  w-full mx-auto ;
+
+    background-image: url('../../public/images/frontview/pixel-background.jpg');
+    background-repeat: repeat-x;
+    height: 49px;
+}
+
+.footerLink {
+  color:  #d305c6;
+  font-size: 1rem;
+  padding: 1rem;
+  
+}
+
+.footerLink:hover {
+  text-decoration: underline;
+  /* box-shadow: 3px 3px 1px #d305c6;
+  -webkit-box-shadow: 3px 3px 1px #d305c6;
+  -moz-box-shadow: 3px 3px 1px #d305c6; */
+}

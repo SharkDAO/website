@@ -1,0 +1,18 @@
+.hero {
+
+
+    @apply w-full flex flex-col justify-center items-center;
+
+    background-image: linear-gradient(to bottom, #2199eb 0%, #9ef9ff 60%, #027b8b 60%, #024363 63%);
+
+}
+
+.watersEdge {
+    background-image: url('../../public/images/frontview/tile-water-line.png');
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 49px;
+    background-color: #024363;
+
+    @apply flex flex-row;
+}

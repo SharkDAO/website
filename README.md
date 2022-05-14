@@ -7,16 +7,15 @@ First, run the development server:
 ```bash
 yarn 
 yarn start
+yarn dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 
 Things to know:
 * pages/assets/ - images for use in app
-* phaser will use the asset-pack.json in the assets dir to load images 
-* uses recoil for state sync between react and phaser
-* tailwind is in its infancy
-* player is transparent and will be use to navigate up and down with cursors right now
+* pixijs is used for animation 
+* tailwind for layout styles
 
 TODO:
 * lots, but specficially add good images for the island

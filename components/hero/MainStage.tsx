@@ -15,16 +15,15 @@ const centerPointY = viewportHeight / 2;
 
 
 const options = {
-    backgroundColor: 0xFFFFFFa,
     resolution: window.devicePixelRatio,
     width: Math.min(viewportWidth, 2000),
-    height: viewportHeight
+    height: viewportHeight,
+    backgroundAlpha: 0
 };
 
 const style = {
     width: Math.min(viewportWidth, 2000),
     height: viewportHeight,
-    borderRadius: '10px',
     maxWidth: '2000',
 };
 
