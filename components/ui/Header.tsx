@@ -2,18 +2,20 @@ import { FC } from "react";
 import Link from 'next/link';
 import Image from 'next/image'
 import logoPic from '../../public/images/logo.png'
-
+import styles from './Header.module.css';
 
 export const Header: FC = () => {
 
 
     return (
-        <div className="w-full font-sans bg-white text-center flex justify-between items-center mx-auto container py-2" >
-            <div className="w-full grid grid-flow-row-dense grid-cols-3">
+        <div className={`${styles.header}`} >
+            <div className="w-full flex flex-row justify-center items-center">
+                {/*
                 <div className="col-span-1 pt-4">
                     <Link href="/about"><a>about</a></Link>  |  <Link href="/proposals"><a>proposals</a></Link>
                 </div>
-                <div> 
+                */}
+                <div className={styles.headerTab}> 
                     <Link href="/">
                         <a><Image
                             src={logoPic}
@@ -23,10 +25,11 @@ export const Header: FC = () => {
                         /></a>
                     </Link>
                 </div>
-                <div className="col-span-1 pt-4">
+                {/* <div className="col-span-1 pt-4">
                     <button className="btn btn-blue focus:shadow-outline">connect wallet</button>
 
                 </div>
+                */}
             </div>
         </div>
     );

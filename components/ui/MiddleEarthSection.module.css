@@ -1,0 +1,10 @@
+
+.mainSection {
+    
+    @apply w-full flex flex-col justify-center items-center;
+
+    background-image: linear-gradient(to bottom, #0ba6b2 0%, #aafcfc 30%,#98d8f4 100%);
+
+    min-height: 600px;
+
+}

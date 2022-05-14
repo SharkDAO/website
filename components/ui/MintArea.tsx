@@ -3,11 +3,11 @@ import React, { FC, useEffect, useState } from 'react';
 
 const MintingArea = () => {
     return (
-    <div className="max-w-sm w-full lg:max-w-full lg:flex">
-            <div className="h-148 lg:h-auto lg:w-80 flex-none bg-shark-blue rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden">
+        <div className="flex flex-row rounded-md bg-white p-6 drop-shadow-md mt-10">
+            <div className="h-148 lg:h-auto lg:w-80 flex-none text-center overflow-hidden">
                 Shark image here
             </div>
-            <div className="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+            <div className="border-l border-gray-400 p-4 flex flex-col justify-between leading-normal">
                 <div className="mb-8">
                     <p className="text-sm text-gray-600 flex items-center">
                      Minting

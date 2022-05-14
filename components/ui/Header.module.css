@@ -1,0 +1,31 @@
+.header {
+
+    background-color: aqua;
+
+    @apply w-full text-center mx-auto  pb-2;
+
+    background-image: linear-gradient(to bottom, #f56aff, #2199eb);
+    
+    /* flex justify-between items-center container  */
+
+    /**
+    background-image: linear-gradient(to bottom, #f56aff, #1689eb);
+
+    
+    2199ebff
+
+    purple top: d305c6ff
+mid purple: f56affff
+yellow: ffed9eff
+
+*/
+
+}
+.headerTab {
+    background-color: white;
+    width: 250px;
+    height: 120px;
+    padding: 0.5rem;
+
+    @apply rounded-b-md; 
+}
